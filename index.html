@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#082c24">
+<meta name="description" content="بوابة الإسلام: تعرّف على الإسلام وتعلّم القرآن والسنة والعلوم الشرعية من مصادر موثوقة.">
+<link rel="manifest" href="manifest.webmanifest">
+<title>بوابة الإسلام</title>
+<style>
+:root{--green:#082c24;--green2:#124638;--gold:#d6b56d;--cream:#f7f4ec;--ink:#17251f;--muted:#68756e}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif}
+header{background:linear-gradient(145deg,var(--green),var(--green2));color:#fff;padding:24px 18px 28px;border-radius:0 0 26px 26px;position:relative;overflow:hidden}
+header:after{content:"۞";position:absolute;left:12px;top:12px;font-size:120px;color:#d6b56d18}
+.top{display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1}.brand{font-weight:800;font-size:21px}.lang{border:1px solid #ffffff55;color:#fff;background:#ffffff12;border-radius:20px;padding:7px 12px}
+.kicker{color:var(--gold);font-size:13px;margin-top:26px}.hero{font-size:27px;line-height:1.5;font-weight:800;margin:7px 0}.sub{font-size:13px;color:#e4eee9}
+main{padding:18px 15px 90px;max-width:760px;margin:auto}.section-title{font-weight:800;color:var(--green);font-size:19px;margin:20px 2px 12px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.tile{background:#fff;border:1px solid #e9e5da;border-radius:17px;padding:15px;text-align:right;min-height:112px;box-shadow:0 4px 15px #132b1b08;cursor:pointer}.tile .ico{font-size:25px}.tile b{display:block;color:var(--green);margin:7px 0 3px}.tile small{color:var(--muted);line-height:1.5}
+.quote{background:#fff;border:1px solid #e6d6ad;border-radius:18px;padding:18px;text-align:center;margin-top:10px}.quote strong{font-size:23px;color:var(--green);line-height:1.8}.quote small{color:var(--muted)}
+.note{font-size:13px;line-height:1.8;color:#53635a;background:#edf1e9;border-radius:14px;padding:13px;margin-top:15px}
+nav{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #e9e5da;display:flex;justify-content:space-around;padding:9px 4px calc(9px + env(safe-area-inset-bottom));z-index:5}
+nav button{border:0;background:none;color:#66736c;font-size:11px;display:grid;gap:3px;justify-items:center;padding:4px;min-width:55px}nav button span{font-size:20px}nav button.active{color:var(--green);font-weight:800}
+.page{display:none}.page.active{display:block}.back{border:0;background:var(--green);color:#fff;border-radius:12px;padding:10px 15px;margin:8px 0 15px}
+.item{background:#fff;border-radius:14px;padding:14px;margin:9px 0;border:1px solid #ece8df}.item b{color:var(--green);display:block;margin-bottom:4px}.item p{margin:0;color:#5b685f;font-size:13px;line-height:1.7}
+footer{text-align:center;color:#77847c;font-size:11px;padding:18px}
+</style>
+</head>
+<body>
+<header>
+ <div class="top"><div class="brand">۞ بوابة الإسلام</div><button class="lang" onclick="alert('سيُضاف اختيار اللغات في التحديث القادم')">العربية ▾</button></div>
+ <div class="kicker">نورٌ من الوحي</div>
+ <div class="hero">تعرّف على الإسلام<br>من مصادره الأصيلة</div>
+ <div class="sub">القرآن الكريم • السنة النبوية • العلم والدعوة</div>
+</header>
+<main>
+ <section id="home" class="page active">
+  <div class="section-title">ابدأ رحلتك</div>
+  <div class="grid">
+   <button class="tile" onclick="openPage('quran')"><span class="ico">📖</span><b>القرآن الكريم</b><small>السور والآيات والتفسير</small></button>
+   <button class="tile" onclick="openPage('hadith')"><span class="ico">📚</span><b>الحديث النبوي</b><small>أحاديث الرسول ﷺ ومصادرها</small></button>
+   <button class="tile" onclick="openPage('nawawi')"><span class="ico">🌿</span><b>الأربعون النووية</b><small>متون الأحاديث وشروحها</small></button>
+   <button class="tile" onclick="openPage('aqeedah')"><span class="ico">🕌</span><b>العقيدة والتوحيد</b><small>أصول الإيمان ومنهج السلف</small></button>
+   <button class="tile" onclick="openPage('fiqh')"><span class="ico">⚖️</span><b>الفقه والعبادات</b><small>الطهارة والصلاة والصيام</small></button>
+   <button class="tile" onclick="openPage('books')"><span class="ico">📜</span><b>المكتبة الإسلامية</b><small>كتب العلماء وطلب العلم</small></button>
+   <button class="tile" onclick="openPage('dawah')"><span class="ico">🌍</span><b>تعرّف على الإسلام</b><small>بوابة للباحثين وغير المسلمين</small></button>
+   <button class="tile" onclick="openPage('questions')"><span class="ico">💬</span><b>الرد على الشبهات</b><small>إجابات موثقة ومحترمة</small></button>
+   <button class="tile" onclick="openPage('seerah')"><span class="ico">☪️</span><b>السيرة النبوية</b><small>حياة الرسول ﷺ ودعوته</small></button>
+   <button class="tile" onclick="openPage('adhkar')"><span class="ico">🤲</span><b>الأذكار والأدعية</b><small>أذكار الصباح والمساء</small></button>
+   <button class="tile" onclick="openPage('scholars')"><span class="ico">🎓</span><b>العلماء وطلب العلم</b><small>تراجم ومسارات تعليمية</small></button>
+   <button class="tile" onclick="openPage('manners')"><span class="ico">💚</span><b>الأخلاق والآداب</b><small>الرحمة والعدل وحسن الخلق</small></button>
+  </div>
+  <div class="section-title">رسالة اليوم</div>
+  <div class="quote"><strong>﴿ وَقُلْ رَبِّ زِدْنِي عِلْمًا ﴾</strong><br><small>سورة طه، الآية 114</small></div>
+  <div class="note">منهج المنصة: عرض النصوص مع توثيق مصادرها، والتمييز بين النص الشرعي وشرحه، وإحالة الفتاوى والنوازل إلى أهل العلم المؤهلين.</div>
+ </section>
+ <section id="quran" class="page"><button class="back" onclick="openPage('home')">رجوع</button><h2>القرآن الكريم</h2><div class="item"><b>المصحف الشريف</b><p>سيُربط بنص قرآني مضبوط من مصدر موثوق، مع بيانات السور والآيات.</p></div><div class="item"><b>التفسير وترجمة المعاني</b><p>عرض التفاسير والترجمات مع توثيق الطبعات والمصادر والتراخيص.</p></div><div class="item"><b>التلاوات</b><p>إضافة القراء والتشغيل والتنزيل وفق حقوق الاستخدام.</p></div></section>
+ <section id="hadith" class="page"><button class="back" onclick="openPage('home')">رجوع</button><h2>الحديث النبوي</h2><div class="item"><b>صحيح البخاري</b><p>أحاديث الكتاب مع رقم الحديث والكتاب والباب وبيانات المصدر.</p></div><div class="item"><b>صحيح مسلم</b><p>النصوص مع التخريج والشروح المعتمدة.</p></div><div class="item"><b>سنن أبي داود والترمذي والنسائي وابن ماجه</b><p>إتاحة كتب السنة مع بيان درجة الحديث عند الحاجة ومصدر الحكم عليها.</p></div><div class="item"><b>شرح الحديث</b><p>شرح موثق، مع فصل كلام الشارح عن نص الحديث.</p></div></section>
+ <section id="nawawi" class="page"><button class="back" onclick="openPage('home')">رجوع</button><h2>الأربعون النووية</h2><div class="item"><b>الأربعون النووية</b><p>متن الإمام النووي، مع تخريج الأحاديث وشرح مبسط وشروح أهل العلم.</p></div><div class="item"><b>رياض الصالحين</b><p>أبواب الإخلاص والتوبة والصبر والأخلاق والعبادات.</p></div><div class="item"><b>الأذكار للنووي</b><p>أذكار وأدعية مرتبة بحسب الأحوال، مع مراجعة النصوص.</p></div><div class="note">لن ننشر نصوصاً أو شروحاً غير متحققة؛ تُراجع الأحاديث والأحكام والمصادر قبل اعتمادها.</div></section>
+ <section id="aqeedah" class="page"><button class="back" onclick="openPage('home')">رجوع</button><h2>العقيدة والتوحيد</h2><div class="item"><b>أصول الإيمان</b><p>الإيمان بالله وملائكته وكتبه ورسله واليوم الآخر والقدر.</p></div><div class="item"><b>التوحيد</b><p>توحيد الربوبية والألوهية والأسماء والصفات، مع أدلتها.</p></div><div class="item"><b>منهج السلف الصالح</b><p>تعريف بالمصادر والقواعد العلمية وأقوال العلماء الموثقة.</p></div></section>
+ <section id="fiqh" class="page"><button class="back" onclick="openPage('home')">رجوع</button><h2>الفقه والعبادات</h2><div class="item"><b>الطهارة والصلاة</b><p>تعليم عملي مرتب مع الأدلة والتنبيه إلى مسائل الخلاف.</p></div><div class="item"><b>الصيام والزكاة والحج</b><p>أحكام العبادات وشروطها وأركانها.</p></div><div class="item"><b>المعاملات والأحوال الشخصية</b><p>مقالات تعليمية، والفتاوى الخاصة تُحال إلى أهل الاختصاص.</p></div></section>
+ <section id="books" class="page"><button class="back" onclick="openPage('home')">رجوع</button><h2>المكتبة الإسلامية</h2><div class="item"><b>كتب الحديث</b><p>أمهات كتب السنة وشروحها.</p></div><div class="item"><b>كتب العقيدة</b><p>متون وشروح موثقة مع بيانات المؤلف والطبعة.</p></div><div class="item"><b>كتب التفسير والفقه والسيرة</b><p>فهارس موضوعية وروابط قانونية للنسخ المتاحة.</p></div></section>
+ <section id="dawah" class="page"><button class="back" onclick="openPage('home')">رجوع</button><h2>تعرّف على الإسلام</h2><div class="item"><b>ما الإسلام؟</b><p>تعريف مبسط بالإسلام وأركانه ومعنى عبادة الله وحده.</p></div><div class="item"><b>من هو محمد ﷺ؟</b><p>سيرة موجزة موثقة عن النبي ورسالته.</p></div><div class="item"><b>كيف أصبح مسلماً؟</b><p>شرح الشهادتين ومعناهما والخطوات الأولى، دون ضغط أو اشتراط التسجيل.</p></div></section>
+ <section id="questions" class="page"><button class="back" onclick="openPage('home')">رجوع</button><h2>الأسئلة والشبهات</h2><div class="item"><b>أسئلة عن وجود الله والنبوة والقرآن</b><p>إجابات منظمة بالحجة والمصدر، وبأسلوب يحترم السائل.</p></div><div class="item"><b>الحوار مع أتباع الأديان</b><p>عرض أمين للمعتقدات وتجنب التشويه والسخرية والتعميم.</p></div></section>
+ <section id="seerah" class="page"><button class="back" onclick="openPage('home')">رجوع</button><h2>السيرة النبوية</h2><div class="item"><b>السيرة من المولد إلى البعثة</b><p>أحداث موثقة مع بيان درجات الروايات عند الحاجة.</p></div><div class="item"><b>العهد المكي والمدني</b><p>الدعوة والهجرة والغزوات والشمائل.</p></div></section>
+ <section id="adhkar" class="page"><button class="back" onclick="openPage('home')">رجوع</button><h2>الأذكار والأدعية</h2><div class="item"><b>أذكار الصباح والمساء</b><p>نصوص مضبوطة مع التخريج وعدد التكرار.</p></div><div class="item"><b>أذكار الصلاة والنوم</b><p>أذكار ثابتة من السنة مع مراجعها.</p></div></section>
+ <section id="scholars" class="page"><button class="back" onclick="openPage('home')">رجوع</button><h2>العلماء وطلب العلم</h2><div class="item"><b>مسارات طلب العلم</b><p>مراحل للمبتدئ والمتوسط، مع ترتيب المتون والشروح.</p></div><div class="item"><b>تراجم العلماء</b><p>سير علمية موثقة ومراجع لكل ترجمة.</p></div></section>
+ <section id="manners" class="page"><button class="back" onclick="openPage('home')">رجوع</button><h2>الأخلاق والآداب</h2><div class="item"><b>الرحمة والعدل والصدق</b><p>قيم إسلامية بنصوصها وتطبيقاتها في الحياة اليومية.</p></div><div class="item"><b>حقوق الناس وحسن المعاملة</b><p>صلة الرحم وبر الوالدين والجوار وآداب الحوار.</p></div></section>
+ <footer>بوابة الإسلام · نموذج أولي تجريبي · المحتوى الشرعي يحتاج مراجعة وتوثيقاً قبل النشر</footer>
+</main>
+<nav>
+ <button class="active" onclick="openPage('home',this)"><span>⌂</span>الرئيسية</button>
+ <button onclick="openPage('quran',this)"><span>📖</span>القرآن</button>
+ <button onclick="openPage('hadith',this)"><span>📚</span>السنة</button>
+ <button onclick="openPage('dawah',this)"><span>🌍</span>الدعوة</button>
+ <button onclick="openPage('books',this)"><span>☰</span>المكتبة</button>
+</nav>
+<script>
+function openPage(id,btn){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById(id).classList.add('active');document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));if(btn)btn.classList.add('active');window.scrollTo(0,0)}
+if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}))}
+</script>
+</body></html>
