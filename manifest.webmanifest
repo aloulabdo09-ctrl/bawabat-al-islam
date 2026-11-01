@@ -1,0 +1,9 @@
+{
+  "name": "بوابة الإسلام",
+  "short_name": "بوابة الإسلام",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f7f4ec",
+  "theme_color": "#082c24",
+  "description": "منصة إسلامية للتعلم والتعريف بالإسلام"
+}
