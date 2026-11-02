@@ -6,6 +6,8 @@
 <meta name="theme-color" content="#082c24">
 <meta name="description" content="بوابة الإسلام: تعرّف على الإسلام وتعلّم القرآن والسنة والعلوم الشرعية من مصادر موثوقة.">
 <link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
 <title>بوابة الإسلام</title>
 <style>
 :root{--green:#082c24;--green2:#124638;--gold:#d6b56d;--cream:#f7f4ec;--ink:#17251f;--muted:#68756e}
@@ -20,9 +22,28 @@ main{padding:18px 15px 90px;max-width:760px;margin:auto}.section-title{font-weig
 .note{font-size:13px;line-height:1.8;color:#53635a;background:#edf1e9;border-radius:14px;padding:13px;margin-top:15px}
 nav{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #e9e5da;display:flex;justify-content:space-around;padding:9px 4px calc(9px + env(safe-area-inset-bottom));z-index:5}
 nav button{border:0;background:none;color:#66736c;font-size:11px;display:grid;gap:3px;justify-items:center;padding:4px;min-width:55px}nav button span{font-size:20px}nav button.active{color:var(--green);font-weight:800}
-.page{display:none}.page.active{display:block}.back{border:0;background:var(--green);color:#fff;border-radius:12px;padding:10px 15px;margin:8px 0 15px}
+.page{display:none}.page.active{display:block}.back{border:0;background:var(--green);color:#fff;border-radius:12px;padding:10px 15px;margin:8px 0 15px;font-size:14px}
 .item{background:#fff;border-radius:14px;padding:14px;margin:9px 0;border:1px solid #ece8df}.item b{color:var(--green);display:block;margin-bottom:4px}.item p{margin:0;color:#5b685f;font-size:13px;line-height:1.7}
 footer{text-align:center;color:#77847c;font-size:11px;padding:18px}
+
+/* القراءة والبيانات */
+.search{width:100%;border:1px solid #e0dbcd;border-radius:12px;padding:12px 14px;font-size:15px;background:#fff;margin:4px 0 10px;font-family:inherit}
+.row{display:flex;align-items:center;gap:10px;width:100%;text-align:right;background:#fff;border:1px solid #ece8df;border-radius:14px;padding:12px 14px;margin:7px 0;font-family:inherit;font-size:15px;color:var(--ink);cursor:pointer}
+.row .n{min-width:34px;height:34px;border-radius:50%;background:var(--green);color:var(--gold);display:grid;place-items:center;font-size:13px;font-weight:700;flex:none}
+.row b{flex:1;color:var(--green)}.row small{color:var(--muted);font-size:12px}
+.bar{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 12px}.bar .back{margin:0}.bar .alt{background:#fff;color:var(--green);border:1px solid #d9d3c2}
+.surah-title{text-align:center;font-size:24px;font-weight:800;color:var(--green);margin:6px 0 2px}
+.bism{text-align:center;font-size:24px;color:var(--green);margin:10px 0 14px;font-family:"Amiri Quran","Scheherazade New","Traditional Arabic",serif}
+.mushaf{background:#fff;border:1px solid #e6d6ad;border-radius:18px;padding:18px 16px;font-family:"Amiri Quran","Scheherazade New","Traditional Arabic",serif;font-size:25px;line-height:2.4;text-align:justify}
+.mushaf .an{color:var(--gold);font-size:19px;margin:0 3px}
+.ayah{background:#fff;border:1px solid #ece8df;border-radius:14px;padding:14px;margin:9px 0}
+.ayah .t{font-family:"Amiri Quran","Scheherazade New","Traditional Arabic",serif;font-size:23px;line-height:2.2}
+.ayah .tf{font-size:14px;line-height:1.9;color:#4f5f56;border-top:1px dashed #e0dbcd;margin-top:8px;padding-top:8px}
+.hd{background:#fff;border:1px solid #ece8df;border-radius:14px;padding:14px;margin:10px 0}
+.hd .t{font-size:17px;line-height:2.1}.hd .m{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:8px;font-size:12px;color:var(--muted)}
+.chip{background:#edf1e9;color:var(--green2);border-radius:20px;padding:3px 10px;font-size:11px}
+.num-in{display:flex;gap:8px;margin:8px 0 12px}.num-in input{flex:1;border:1px solid #e0dbcd;border-radius:12px;padding:11px;font-size:15px;background:#fff;font-family:inherit}
+.err{background:#fbeeea;color:#7a2e1d}.src{font-size:11px;color:#77847c;line-height:1.8;margin-top:14px}
 </style>
 </head>
 <body>
@@ -53,9 +74,11 @@ footer{text-align:center;color:#77847c;font-size:11px;padding:18px}
   <div class="quote"><strong>﴿ وَقُلْ رَبِّ زِدْنِي عِلْمًا ﴾</strong><br><small>سورة طه، الآية 114</small></div>
   <div class="note">منهج المنصة: عرض النصوص مع توثيق مصادرها، والتمييز بين النص الشرعي وشرحه، وإحالة الفتاوى والنوازل إلى أهل العلم المؤهلين.</div>
  </section>
- <section id="quran" class="page"><button class="back" onclick="openPage('home')">رجوع</button><h2>القرآن الكريم</h2><div class="item"><b>المصحف الشريف</b><p>سيُربط بنص قرآني مضبوط من مصدر موثوق، مع بيانات السور والآيات.</p></div><div class="item"><b>التفسير وترجمة المعاني</b><p>عرض التفاسير والترجمات مع توثيق الطبعات والمصادر والتراخيص.</p></div><div class="item"><b>التلاوات</b><p>إضافة القراء والتشغيل والتنزيل وفق حقوق الاستخدام.</p></div></section>
- <section id="hadith" class="page"><button class="back" onclick="openPage('home')">رجوع</button><h2>الحديث النبوي</h2><div class="item"><b>صحيح البخاري</b><p>أحاديث الكتاب مع رقم الحديث والكتاب والباب وبيانات المصدر.</p></div><div class="item"><b>صحيح مسلم</b><p>النصوص مع التخريج والشروح المعتمدة.</p></div><div class="item"><b>سنن أبي داود والترمذي والنسائي وابن ماجه</b><p>إتاحة كتب السنة مع بيان درجة الحديث عند الحاجة ومصدر الحكم عليها.</p></div><div class="item"><b>شرح الحديث</b><p>شرح موثق، مع فصل كلام الشارح عن نص الحديث.</p></div></section>
- <section id="nawawi" class="page"><button class="back" onclick="openPage('home')">رجوع</button><h2>الأربعون النووية</h2><div class="item"><b>الأربعون النووية</b><p>متن الإمام النووي، مع تخريج الأحاديث وشرح مبسط وشروح أهل العلم.</p></div><div class="item"><b>رياض الصالحين</b><p>أبواب الإخلاص والتوبة والصبر والأخلاق والعبادات.</p></div><div class="item"><b>الأذكار للنووي</b><p>أذكار وأدعية مرتبة بحسب الأحوال، مع مراجعة النصوص.</p></div><div class="note">لن ننشر نصوصاً أو شروحاً غير متحققة؛ تُراجع الأحاديث والأحكام والمصادر قبل اعتمادها.</div></section>
+
+ <section id="quran" class="page"><button class="back" onclick="openPage('home')">رجوع</button><h2>القرآن الكريم</h2><div id="quran-body"></div></section>
+ <section id="hadith" class="page"><button class="back" onclick="openPage('home')">رجوع</button><h2>الحديث النبوي</h2><div id="hadith-body"></div></section>
+ <section id="nawawi" class="page"><button class="back" onclick="openPage('home')">رجوع</button><h2>الأربعون النووية</h2><div id="nawawi-body"></div></section>
+
  <section id="aqeedah" class="page"><button class="back" onclick="openPage('home')">رجوع</button><h2>العقيدة والتوحيد</h2><div class="item"><b>أصول الإيمان</b><p>الإيمان بالله وملائكته وكتبه ورسله واليوم الآخر والقدر.</p></div><div class="item"><b>التوحيد</b><p>توحيد الربوبية والألوهية والأسماء والصفات، مع أدلتها.</p></div><div class="item"><b>منهج السلف الصالح</b><p>تعريف بالمصادر والقواعد العلمية وأقوال العلماء الموثقة.</p></div></section>
  <section id="fiqh" class="page"><button class="back" onclick="openPage('home')">رجوع</button><h2>الفقه والعبادات</h2><div class="item"><b>الطهارة والصلاة</b><p>تعليم عملي مرتب مع الأدلة والتنبيه إلى مسائل الخلاف.</p></div><div class="item"><b>الصيام والزكاة والحج</b><p>أحكام العبادات وشروطها وأركانها.</p></div><div class="item"><b>المعاملات والأحوال الشخصية</b><p>مقالات تعليمية، والفتاوى الخاصة تُحال إلى أهل الاختصاص.</p></div></section>
  <section id="books" class="page"><button class="back" onclick="openPage('home')">رجوع</button><h2>المكتبة الإسلامية</h2><div class="item"><b>كتب الحديث</b><p>أمهات كتب السنة وشروحها.</p></div><div class="item"><b>كتب العقيدة</b><p>متون وشروح موثقة مع بيانات المؤلف والطبعة.</p></div><div class="item"><b>كتب التفسير والفقه والسيرة</b><p>فهارس موضوعية وروابط قانونية للنسخ المتاحة.</p></div></section>
@@ -75,7 +98,153 @@ footer{text-align:center;color:#77847c;font-size:11px;padding:18px}
  <button onclick="openPage('books',this)"><span>☰</span>المكتبة</button>
 </nav>
 <script>
-function openPage(id,btn){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById(id).classList.add('active');document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));if(btn)btn.classList.add('active');window.scrollTo(0,0)}
+const $=id=>document.getElementById(id);
+function el(t,c,x){const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
+const num=n=>Number(n).toLocaleString('ar-EG',{useGrouping:false});
+const norm=t=>String(t).replace(/[\u064B-\u065F\u0670\u06D6-\u06ED\u0640]/g,'').replace(/[ٱأإآ]/g,'ا').toLowerCase();
+async function getJSON(urls){let last;for(const u of [].concat(urls)){try{const r=await fetch(u);if(!r.ok)throw new Error(r.status);return await r.json()}catch(e){last=e}}throw last}
+function loading(box){box.replaceChildren(el('div','note','جاري التحميل…'))}
+function fail(box,retry){const b=el('button','back','إعادة المحاولة');b.onclick=retry;box.replaceChildren(el('div','note err','تعذّر التحميل. تأكد من الاتصال بالإنترنت (مطلوب أول مرة فقط لكل سورة أو كتاب)، ثم أعد المحاولة.'),b)}
+
+function openPage(id,btn){
+ document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+ $(id).classList.add('active');
+ document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));
+ if(btn)btn.classList.add('active');
+ window.scrollTo(0,0);
+ if(id==='quran'&&!$('quran-body').children.length)quranList();
+ if(id==='hadith'&&!$('hadith-body').children.length)hadithBooks();
+ if(id==='nawawi'&&!$('nawawi-body').children.length)nawawiLoad();
+}
+
+/* ===== القرآن الكريم (المصدر: AlQuran Cloud) ===== */
+const QAPI='https://api.alquran.cloud/v1';
+let surahs=null;
+async function quranList(){
+ const box=$('quran-body');loading(box);
+ try{
+  if(!surahs)surahs=(await getJSON(QAPI+'/surah')).data;
+  const s=el('input','search');s.placeholder='ابحث عن سورة (بالاسم أو الرقم)';
+  const list=el('div');
+  const draw=()=>{const q=norm(s.value.trim());
+   list.replaceChildren(...surahs.filter(x=>!q||norm(x.name).includes(q)||String(x.number)===q||x.englishName.toLowerCase().includes(q)).map(x=>{
+    const r=el('button','row');
+    r.append(el('span','n',num(x.number)),el('b',null,x.name),el('small',null,(x.revelationType==='Meccan'?'مكية':'مدنية')+' · '+num(x.numberOfAyahs)+' آية'));
+    r.onclick=()=>quranRead(x.number);return r}))};
+  s.oninput=draw;draw();
+  box.replaceChildren(s,list,el('div','src','نص المصحف (الرسم العثماني) من واجهة AlQuran Cloud المفتوحة. يُحفظ كل ما تقرؤه للاستخدام بدون إنترنت.'));
+ }catch(e){fail(box,quranList)}
+}
+async function quranRead(n){
+ const box=$('quran-body');loading(box);window.scrollTo(0,0);
+ try{
+  const meta=surahs.find(x=>x.number===n);
+  const d=(await getJSON(`${QAPI}/surah/${n}/quran-uthmani`)).data;
+  const ay=d.ayahs.map(a=>({n:a.numberInSurah,t:a.text}));
+  let bism=false;
+  if(n!==1&&n!==9){const t=ay[0].t,k='ٱلرَّحِيمِ',i=t.indexOf(k);
+   if(t.startsWith('بِسْمِ')&&i>0){ay[0].t=t.slice(i+k.length).trim();bism=true}}
+  let tafsir=null,showT=false;
+  const body=el('div');
+  const render=()=>{
+   body.replaceChildren();
+   if(!showT){
+    const m=el('div','mushaf');
+    ay.forEach(a=>{m.append(document.createTextNode(a.t+' '),el('span','an','﴿'+num(a.n)+'﴾'),document.createTextNode(' '))});
+    body.append(m);
+   }else{
+    ay.forEach((a,i)=>{const c=el('div','ayah');
+     const t=el('div','t',a.t+' ');t.append(el('span','an','﴿'+num(a.n)+'﴾'));
+     c.append(t,el('div','tf',tafsir[i]||''));body.append(c)});
+   }};
+  const bar=el('div','bar');
+  const b1=el('button','back','القائمة');b1.onclick=quranList;
+  const tb=el('button','back alt','التفسير الميسر');
+  tb.onclick=async()=>{
+   if(!showT&&!tafsir){tb.textContent='جاري التحميل…';
+    try{tafsir=(await getJSON(`${QAPI}/surah/${n}/ar.muyassar`)).data.ayahs.map(a=>a.text)}
+    catch(e){tb.textContent='التفسير الميسر';alert('تعذّر تحميل التفسير الآن، جرّب لاحقاً.');return}}
+   showT=!showT;tb.textContent=showT?'إخفاء التفسير':'التفسير الميسر';render();};
+  bar.append(b1,tb);
+  if(n>1){const p=el('button','back alt','◂ السابقة');p.onclick=()=>quranRead(n-1);bar.append(p)}
+  if(n<114){const x=el('button','back alt','التالية ▸');x.onclick=()=>quranRead(n+1);bar.append(x)}
+  box.replaceChildren(bar,el('div','surah-title',d.name));
+  box.append(el('div','note',(meta&&meta.revelationType==='Meccan'?'مكية':'مدنية')+' · '+num(ay.length)+' آية'));
+  if(bism)box.append(el('div','bism','بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ'));
+  render();box.append(body);
+ }catch(e){fail(box,()=>quranRead(n))}
+}
+
+/* ===== الحديث النبوي (المصدر: hadith-api على jsDelivr) ===== */
+const HAPI='https://cdn.jsdelivr.net/gh/fawazahmed0/hadith-api@1/editions';
+const BOOKS=[
+ ['bukhari','صحيح البخاري',97],['muslim','صحيح مسلم',56],['abudawud','سنن أبي داود',43],
+ ['tirmidhi','جامع الترمذي',49],['nasai','سنن النسائي',51],['ibnmajah','سنن ابن ماجه',37],['malik','موطأ مالك',61]
+];
+const J=p=>[`${HAPI}/${p}.min.json`,`${HAPI}/${p}.json`];
+function hadithCard(h){
+ const c=el('div','hd');c.append(el('div','t',h.text||''));
+ const m=el('div','m');m.append(el('span',null,'رقم '+num(h.hadithnumber!=null?h.hadithnumber:(h.arabicnumber||''))));
+ (h.grades||[]).forEach(g=>{if(g&&g.grade)m.append(el('span','chip',g.grade+(g.name?' ('+g.name+')':'')))});
+ c.append(m);return c;
+}
+function hadithBooks(){
+ const box=$('hadith-body');box.replaceChildren();
+ BOOKS.forEach(b=>{const r=el('button','row');r.append(el('span','n','📚'),el('b',null,b[1]));r.onclick=()=>hadithBook(b);box.append(r)});
+ box.append(el('div','src','نصوص الأحاديث من مجموعة hadith-api المفتوحة. تُنقل أحكام الحديث كما وردت في المجموعة وتحتاج مراجعة أهل العلم. يُحفظ ما تقرؤه للاستخدام بدون إنترنت.'));
+}
+async function hadithBook(b){
+ const box=$('hadith-body');loading(box);window.scrollTo(0,0);
+ let names={};
+ try{const d=await getJSON(J(`ara-${b[0]}/sections/1`));names=(d.metadata&&d.metadata.section)||{}}catch(e){}
+ let keys=Object.keys(names);
+ if(keys.length<2){keys=Array.from({length:b[2]},(_,i)=>String(i+1));}
+ keys.sort((a,c)=>a-c);
+ const back=el('button','back','الكتب');back.onclick=hadithBooks;
+ const jump=el('div','num-in');const inp=el('input');inp.type='number';inp.placeholder='اذهب إلى حديث برقم…';inp.inputMode='numeric';
+ const go=el('button','back','اذهب');go.style.margin='0';
+ go.onclick=()=>{if(inp.value)hadithOne(b,inp.value)};jump.append(inp,go);
+ box.replaceChildren(back,el('div','surah-title',b[1]),jump);
+ keys.forEach(k=>{const r=el('button','row');r.append(el('span','n',num(k)),el('b',null,names[k]||('الكتاب '+num(k))));r.onclick=()=>hadithSection(b,k,names[k]);box.append(r)});
+}
+async function hadithSection(b,k,name){
+ const box=$('hadith-body');loading(box);window.scrollTo(0,0);
+ try{
+  const d=await getJSON(J(`ara-${b[0]}/sections/${k}`));
+  const hs=d.hadiths||[];
+  const back=el('button','back','الأبواب');back.onclick=()=>hadithBook(b);
+  box.replaceChildren(back,el('div','surah-title',b[1]),el('div','note',(name||('الكتاب '+num(k)))+' · '+num(hs.length)+' حديث'));
+  if(!hs.length){box.append(el('div','note','لا توجد أحاديث في هذا القسم.'));return}
+  const wrap=el('div'),more=el('button','back','عرض المزيد');let i=0;
+  const draw=()=>{hs.slice(i,i+25).forEach(h=>wrap.append(hadithCard(h)));i+=25;if(i>=hs.length)more.remove()};
+  more.onclick=draw;box.append(wrap,more);draw();
+ }catch(e){fail(box,()=>hadithSection(b,k,name))}
+}
+async function hadithOne(b,n){
+ const box=$('hadith-body');loading(box);window.scrollTo(0,0);
+ try{
+  const d=await getJSON(J(`ara-${b[0]}/${n}`));
+  const h=d.hadiths?d.hadiths[0]:d;
+  const back=el('button','back','رجوع');back.onclick=()=>hadithBook(b);
+  box.replaceChildren(back,el('div','surah-title',b[1]));
+  if(!h||!h.text){box.append(el('div','note','لم يُعثر على هذا الرقم.'));return}
+  if(h.hadithnumber==null)h.hadithnumber=n;
+  box.append(hadithCard(h));
+ }catch(e){fail(box,()=>hadithOne(b,n))}
+}
+
+/* ===== الأربعون النووية ===== */
+async function nawawiLoad(){
+ const box=$('nawawi-body');loading(box);
+ try{
+  const d=await getJSON(J('ara-nawawi'));
+  const hs=d.hadiths||[];
+  box.replaceChildren(el('div','note','الأربعون النووية للإمام النووي · '+num(hs.length)+' حديثاً'));
+  hs.forEach(h=>box.append(hadithCard(h)));
+  box.append(el('div','src','المصدر: مجموعة hadith-api المفتوحة. يحتاج النص والحكم إلى مراجعة أهل العلم قبل الاعتماد.'));
+ }catch(e){fail(box,nawawiLoad)}
+}
+
 if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}))}
 </script>
 </body></html>
